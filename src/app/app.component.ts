@@ -1,4 +1,9 @@
 import { RouterOutlet } from "@quinntynebrown/router";
+import { HamburgerButtonComponent } from "@quinntynebrown/custom-elements";
+
+const importedComponents = [
+    HamburgerButtonComponent
+];
 
 declare var System: any;
 

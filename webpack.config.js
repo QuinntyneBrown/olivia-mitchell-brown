@@ -5,9 +5,9 @@ module.exports = {
         extensions: ['.ts', '.js'],
         alias: {
             '@quinntynebrown/router': path.resolve('../router/dist/index.js'),
-            '@quinntnebrown/custom-elements': path.resolve('../custom-elements/dist/index.js'),
-            '@quinntnebrown/models': path.resolve('../models/dist/index.js'),
-            '@quinntnebrown/utilities': path.resolve('../utilities/dist/index.js')
+            '@quinntynebrown/custom-elements': path.resolve('../custom-elements/dist/index.js'),
+            '@quinntynebrown/models': path.resolve('../models/dist/index.js'),
+            '@quinntynebrown/utilities': path.resolve('../utilities/dist/index.js')
         }        
     },
     entry: './src/app/app.component.ts',
