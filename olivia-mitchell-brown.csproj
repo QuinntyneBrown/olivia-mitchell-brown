@@ -75,15 +75,15 @@
     <Content Include=".gitignore" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
-    <Content Include="src\app.component.css">
+    <Content Include="src\app\app.component.css">
       <DependentUpon>app.component.html</DependentUpon>
     </Content>
-    <Content Include="src\home\home-page.component.css">
+    <Content Include="src\app\home\home-page.component.css">
       <DependentUpon>home-page.component.html</DependentUpon>
     </Content>
     <Content Include="webpack.config.js" />
-    <Content Include="src\app.component.html" />
-    <Content Include="src\home\home-page.component.html" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\home\home-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -96,10 +96,10 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\app.component.ts">
+    <TypeScriptCompile Include="src\app\app.component.ts">
       <DependentUpon>app.component.html</DependentUpon>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="src\home\home-page.component.ts">
+    <TypeScriptCompile Include="src\app\home\home-page.component.ts">
       <DependentUpon>home-page.component.html</DependentUpon>
     </TypeScriptCompile>
   </ItemGroup>
