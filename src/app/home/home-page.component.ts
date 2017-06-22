@@ -1,3 +1,5 @@
+import { ApiService } from "../shared";
+
 declare var System: any;
 
 const template = document.createElement("template");
@@ -8,7 +10,7 @@ const promises = Promise.all([
 ]);
 
 export class HomePageComponent extends HTMLElement {
-    constructor() {
+    constructor(private _apiService: ApiService = ApiService.Instance) {
         super();
     }
 
