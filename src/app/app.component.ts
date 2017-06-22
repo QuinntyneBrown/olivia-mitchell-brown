@@ -23,6 +23,11 @@ export class AppRouterOutletComponent extends RouterOutlet {
                 path: "/",
                 name: "home-page",
                 resolve: () => System.import('./home/home-page.component')
+            },
+            {
+                path: "/favourite-uncle",
+                name: "favourite-unlce-page",
+                resolve: () => System.import('./favourite-unlce/favourite-unlce-page.component')
             }
         ] as any);
         super.connectedCallback();

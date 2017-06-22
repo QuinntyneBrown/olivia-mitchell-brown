@@ -1,4 +1,6 @@
 import { ApiService } from "../shared";
+import { Container } from "../../container";
+import { Router } from "@quinntynebrown/router";
 
 declare var System: any;
 
@@ -10,7 +12,10 @@ const promises = Promise.all([
 ]);
 
 export class HomePageComponent extends HTMLElement {
-    constructor(private _apiService: ApiService = ApiService.Instance) {
+    constructor(
+        private _apiService: ApiService = Container.resolve(ApiService),
+        private _router: Router = Container.resolve(Router)
+        ) {
         super();
     }
 
@@ -35,8 +40,12 @@ export class HomePageComponent extends HTMLElement {
     }
 
     private async _bind() {
-
+        var result = await this._apiService.getContentBlock({ name: "Home" });        
+        this.homeContentBlockElement.setAttribute("content-block", JSON.stringify(result));
     }
+
+    private get homeContentBlockElement(): HTMLElement { return this.shadowRoot.querySelector("ce-content-block") as HTMLElement; }
+
 
     private _setEventListeners() {
 

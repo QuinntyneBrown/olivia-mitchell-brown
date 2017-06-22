@@ -71,6 +71,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="dist\0.bundle.js" />
+    <Content Include="dist\1.bundle.js" />
+    <Content Include="dist\10.bundle.js" />
+    <Content Include="dist\11.bundle.js" />
+    <Content Include="dist\12.bundle.js" />
+    <Content Include="dist\13.bundle.js" />
+    <Content Include="dist\14.bundle.js" />
+    <Content Include="dist\15.bundle.js" />
+    <Content Include="dist\16.bundle.js" />
+    <Content Include="dist\17.bundle.js" />
+    <Content Include="dist\18.bundle.js" />
+    <Content Include="dist\19.bundle.js" />
+    <Content Include="dist\2.bundle.js" />
+    <Content Include="dist\20.bundle.js" />
+    <Content Include="dist\21.bundle.js" />
+    <Content Include="dist\22.bundle.js" />
+    <Content Include="dist\23.bundle.js" />
+    <Content Include="dist\24.bundle.js" />
+    <Content Include="dist\25.bundle.js" />
+    <Content Include="dist\26.bundle.js" />
+    <Content Include="dist\27.bundle.js" />
+    <Content Include="dist\28.bundle.js" />
+    <Content Include="dist\29.bundle.js" />
+    <Content Include="dist\3.bundle.js" />
+    <Content Include="dist\30.bundle.js" />
+    <Content Include="dist\31.bundle.js" />
+    <Content Include="dist\32.bundle.js" />
+    <Content Include="dist\33.bundle.js" />
+    <Content Include="dist\34.bundle.js" />
+    <Content Include="dist\35.bundle.js" />
+    <Content Include="dist\4.bundle.js" />
+    <Content Include="dist\5.bundle.js" />
+    <Content Include="dist\6.bundle.js" />
+    <Content Include="dist\7.bundle.js" />
+    <Content Include="dist\8.bundle.js" />
+    <Content Include="dist\9.bundle.js" />
+    <Content Include="dist\bundle.js" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="src\app\app.component.css">
@@ -82,13 +119,14 @@
     <Content Include="webpack.config.js" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\home\home-page.component.html" />
+    <Content Include="src\app\favourite-uncle\favourite-uncle-page.component.css" />
+    <Content Include="src\app\favourite-uncle\favourite-uncle-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="src\app\shared\" />
+    <Folder Include="src\app\favourite-uncle\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
@@ -98,11 +136,20 @@
     <TypeScriptCompile Include="src\app\app.component.ts">
       <DependentUpon>app.component.html</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\container.ts" />
+    <TypeScriptCompile Include="src\create-container.ts" />
     <TypeScriptCompile Include="src\app\home\home-page.component.ts">
       <DependentUpon>home-page.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\shared\api.service.ts" />
     <TypeScriptCompile Include="src\app\shared\index.ts" />
+    <TypeScriptCompile Include="src\app\favourite-uncle\favourite-uncle-page.component.ts" />
+    <TypeScriptCompile Include="src\app\favourite-uncle\index.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\oliviamitchellbrown - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\oliviamitchellbrown - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
