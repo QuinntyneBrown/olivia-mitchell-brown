@@ -25,5 +25,8 @@ module.exports = {
             { test: /\.html$/, loaders: ['html-loader'] },
             { test: /\.ts$/, loaders: ['awesome-typescript-loader'], exclude: /node_modules/ }
         ]
-    }
+    },
+    watchOptions: {
+        aggregateTimeout: 5000
+    }    
 };
