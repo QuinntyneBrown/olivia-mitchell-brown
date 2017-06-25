@@ -113,21 +113,21 @@
     <Content Include="src\app\app.component.css">
       <DependentUpon>app.component.html</DependentUpon>
     </Content>
-    <Content Include="src\app\home\home-page.component.css">
+    <Content Include="src\app\pages\favourite-uncle-page.component.css">
+      <DependentUpon>favourite-uncle-page.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\home-page.component.css">
       <DependentUpon>home-page.component.html</DependentUpon>
     </Content>
     <Content Include="webpack.config.js" />
     <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\home\home-page.component.html" />
-    <Content Include="src\app\favourite-uncle\favourite-uncle-page.component.css" />
-    <Content Include="src\app\favourite-uncle\favourite-uncle-page.component.html" />
+    <Content Include="src\app\pages\home-page.component.html" />
+    <Content Include="src\app\pages\favourite-uncle-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\app\favourite-uncle\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
@@ -136,16 +136,18 @@
     <TypeScriptCompile Include="src\app\app.component.ts">
       <DependentUpon>app.component.html</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\pages\favourite-uncle-page.component.ts">
+      <DependentUpon>favourite-uncle-page.component.html</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\container.ts" />
     <TypeScriptCompile Include="src\create-container.ts" />
-    <TypeScriptCompile Include="src\app\home\home-page.component.ts">
+    <TypeScriptCompile Include="src\app\pages\home-page.component.ts">
       <DependentUpon>home-page.component.html</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\shared\api.service.ts" />
     <TypeScriptCompile Include="src\app\shared\index.ts" />
-    <TypeScriptCompile Include="src\app\favourite-uncle\favourite-uncle-page.component.ts" />
-    <TypeScriptCompile Include="src\app\favourite-uncle\index.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\index.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\oliviamitchellbrown - FTP.pubxml" />

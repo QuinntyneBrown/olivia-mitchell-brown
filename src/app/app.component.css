@@ -1,6 +1,8 @@
 :host {
     display:block;
     contain:content;
+    width:100%;
+    height:100%;
 }
 
 .container {
@@ -20,6 +22,11 @@
 
 ce-button {
     background-color:#fff;
+}
+
+ce-header {
+    --background-color:#5dc2ca;
+    --main-color:#fff;
 }
 
 @media (min-width: 780px) { 

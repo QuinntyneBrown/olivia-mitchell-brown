@@ -1,4 +1,3 @@
-export * from "./favourite-uncle";
-export * from "./home";
+export * from "./pages";
 export * from "./shared";
 export * from "./app.component";

@@ -40,11 +40,11 @@ export class HomePageComponent extends HTMLElement {
     }
 
     private async _bind() {
-        var result = await this._apiService.getContentBlock({ name: "Home" });        
-        this.homeContentBlockElement.setAttribute("content-block", JSON.stringify(result));
+        const contentBlock = await this._apiService.getContentBlock({ name: "Home" });        
+        this._contentBlockElement.setAttribute("content-block", JSON.stringify(contentBlock));
     }
 
-    private get homeContentBlockElement(): HTMLElement { return this.shadowRoot.querySelector("ce-content-block") as HTMLElement; }
+    private get _contentBlockElement(): HTMLElement { return this.shadowRoot.querySelector("ce-content-block") as HTMLElement; }
 
 
     private _setEventListeners() {
