@@ -5,6 +5,16 @@
     height:100%;
 }
 
+ce-link.title {
+    display:inline-block;
+    margin:0px 0px 0px 0px;
+    font-size:1.25em;
+    line-height:3em;
+    color:#fff;
+    font-weight:800;
+    letter-spacing:0px;        
+}
+
 .container {
     display:block;
     margin: 0px auto;
@@ -40,4 +50,9 @@ ce-header {
     .container {
         padding-top:30px;
     }
+
+    ce-link.title {
+        font-size: 2em;
+    }
 }
+
