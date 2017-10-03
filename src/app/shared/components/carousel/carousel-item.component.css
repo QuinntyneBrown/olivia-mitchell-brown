@@ -1,0 +1,16 @@
+:host {
+    display: inline-block;
+    width: var(--viewport-width);
+    height: var(--viewport-height);
+    background-color: #fff;
+    -moz-transition: transform .500s cubic-bezier(.10, .10, .25, .90);
+    -ms-transition: transform .500s cubic-bezier(.10, .10, .25, .90);
+    -webkit-transition: transform .500s cubic-bezier(.10, .10, .25, .90);
+    transition: transform .500s cubic-bezier(.10, .10, .25, .90);
+}
+
+::slotted(h1) {
+    display: inline-block;
+    width: calc(100% - 40px);
+    margin: 20px 20px 20px 20px;
+}

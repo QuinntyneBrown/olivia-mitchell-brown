@@ -75,6 +75,8 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="dist\app.js" />
+    <Content Include="dist\vendor.js" />
     <Content Include="index.html" />
     <Content Include="ng-starter.csproj" />
     <Content Include="ng-starter.sln" />
@@ -84,11 +86,34 @@
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\pages\landing-page.component.css" />
     <Content Include="src\app\pages\landing-page.component.html" />
-    <Content Include="src\app\shared\components\hamburger-button.component.css" />
+    <Content Include="src\app\shared\components\carousel\carousel-container.component.css">
+      <DependentUpon>carousel-container.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\shared\components\carousel\carousel-container.component.html" />
+    <Content Include="src\app\shared\components\carousel\carousel-grid.component.css">
+      <DependentUpon>carousel-grid.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\shared\components\carousel\carousel-grid.component.html" />
+    <Content Include="src\app\shared\components\carousel\carousel-item.component.css">
+      <DependentUpon>carousel-item.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\shared\components\carousel\carousel-item.component.html" />
+    <Content Include="src\app\shared\components\carousel\carousel-viewport.component.css">
+      <DependentUpon>carousel-viewport.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\shared\components\carousel\carousel-viewport.component.html" />
+    <Content Include="src\app\shared\components\carousel\carousel.component.css">
+      <DependentUpon>carousel.component.html</DependentUpon>
+    </Content>
+    <Content Include="src\app\shared\components\carousel\carousel.component.html" />
+    <Content Include="src\app\shared\components\hamburger-button.component.css">
+      <DependentUpon>hamburger-button.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\shared\components\hamburger-button.component.html" />
-    <Content Include="src\app\shared\components\header.component.css" />
+    <Content Include="src\app\shared\components\header.component.css">
+      <DependentUpon>header.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\shared\components\header.component.html" />
-    <Content Include="src\app\shared\services\storage.service.js" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
@@ -101,8 +126,32 @@
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\pages.module.ts" />
-    <TypeScriptCompile Include="src\app\shared\components\hamburger-button.component.ts" />
-    <TypeScriptCompile Include="src\app\shared\components\header.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\carousel\carousel-container.component.ts">
+      <DependentUpon>carousel-container.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\carousel\carousel-grid.component.ts">
+      <DependentUpon>carousel-grid.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\carousel\carousel-item.component.ts">
+      <DependentUpon>carousel-item.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\carousel\carousel-viewport.component.ts">
+      <DependentUpon>carousel-viewport.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\carousel\carousel.component.ts">
+      <DependentUpon>carousel.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\carousel\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\utilities\get-x.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\utilities\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\utilities\rendered-nodes.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\utilities\translate-x.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\hamburger-button.component.ts">
+      <DependentUpon>hamburger-button.component.html</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\shared\components\header.component.ts">
+      <DependentUpon>header.component.html</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\shared\constants.ts" />
     <TypeScriptCompile Include="src\app\shared\services\storage.service.ts" />
     <TypeScriptCompile Include="src\app\shared\shared.module.ts" />
@@ -115,14 +164,7 @@
     <None Include="Properties\PublishProfiles\oliviamitchellbrown - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\oliviamitchellbrown - Web Deploy.pubxml" />
     <Content Include="Web.config" />
-    <Content Include="src\app\shared\services\storage.service.js.map" />
     <Content Include="tsconfig.json" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\styles\" />
