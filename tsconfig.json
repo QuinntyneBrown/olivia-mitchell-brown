@@ -1,25 +1,17 @@
 {
   "compilerOptions": {
-    "module": "es2015",
-    "moduleResolution": "node",
+    "sourceMap": true,
     "declaration": false,
-    "target": "es2015",
+    "moduleResolution": "commonjs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "es2015",
-      "dom"
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "outDir": "build",
-    "skipLibCheck": true,
-    "rootDir": ".",
-    "baseUrl": ".",
-    "suppressImplicitAnyIndexErrors": true,
-    "paths": {
-      "@quinntynebrown/router": [ "../router/dist/index.d.ts" ],
-      "@quinntynebrown/custom-elements": [ "../custom-elements/dist/index.d.ts" ],
-      "@quinntynebrown/models": [ "../models/dist/index.d.ts" ],
-      "@quinntynebrown/utilities": [ "../utilities/dist/index.d.ts" ]
-    }
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   }
 }

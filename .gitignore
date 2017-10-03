@@ -12,11 +12,6 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-src/**/*.js
-src/**/*.js.map
-
-dist
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -28,6 +23,13 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+src/**/*.js
+src/**/*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
+
+dist
 
 # Visual Studio 2015 cache/options directory
 .vs/

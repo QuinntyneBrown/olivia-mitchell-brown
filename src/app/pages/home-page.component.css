@@ -1,9 +1,0 @@
-:host {
-    display:block;
-    contain:content;
-    width:100%;
-}
-
-ce-content-block {
-    margin:0 auto;
-}

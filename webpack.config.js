@@ -1,32 +1,43 @@
-﻿const path = require('path');
+const webpack = require('webpack');
+const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 module.exports = {
-    resolve: {
-        extensions: ['.ts', '.js'],
-        alias: {
-            '@quinntynebrown/router': path.resolve('../router/dist/index.js'),
-            '@quinntynebrown/custom-elements': path.resolve('../custom-elements/dist/index.js'),
-            '@quinntynebrown/models': path.resolve('../models/dist/index.js'),
-            '@quinntynebrown/utilities': path.resolve('../utilities/dist/index.js')
-        }        
+    entry: {
+        'vendor': ['./src/polyfills'],
+        'app': './src/main'
     },
-    entry: './src/app/app.component.ts',
     output: {
-        path: path.join(process.cwd(), 'dist'),
-        publicPath: 'dist/',
-        filename: "bundle.js"
+        path: __dirname + "/dist",
+        filename: "[name].js",
+        publicPath: "dist/"
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.jpg', '.jpeg', '.gif', '.png', '.css', '.html']
     },
     module: {
         loaders: [
-            { test: /\.scss$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader'] },
-            { test: /\.(jpg|jpeg|gif|png)$/, loader: 'file-loader?name=img/[path][name].[ext]' },
-            { test: /\.(eof|woff|woff2|svg)$/, loader: 'file-loader?name=img/[path][name].[ext]' },
+            {
+                test: /\.ts$/,
+                use: [{
+                    loader: 'awesome-typescript-loader'
+                },
+                {
+                    loader: 'angular2-template-loader'
+                }
+                ],
+                exclude: [/\.(spec|e2e)\.ts$/]
+            },
             { test: /\.css$/, loader: 'raw-loader' },
             { test: /\.html$/, loaders: ['html-loader'] },
-            { test: /\.ts$/, loaders: ['awesome-typescript-loader'], exclude: /node_modules/ }
         ]
     },
-    watchOptions: {
-        aggregateTimeout: 5000
-    }    
+    plugins: [
+        //new UglifyJsPlugin({
+        //    beautify: false, //prod
+        //    mangle: { screw_ie8: true, keep_fnames: true }, //prod
+        //    compress: { screw_ie8: true }, //prod
+        //    comments: false //prod
+        //})
+    ]
 };

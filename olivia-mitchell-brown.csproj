@@ -6,7 +6,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{65E72951-6C35-414F-8832-ED6055C9AFF1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -14,20 +15,23 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>olivia_mitchell_brown</RootNamespace>
     <AssemblyName>olivia-mitchell-brown</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
     <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,106 +56,76 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="dist\0.bundle.js" />
-    <Content Include="dist\1.bundle.js" />
-    <Content Include="dist\10.bundle.js" />
-    <Content Include="dist\11.bundle.js" />
-    <Content Include="dist\12.bundle.js" />
-    <Content Include="dist\13.bundle.js" />
-    <Content Include="dist\14.bundle.js" />
-    <Content Include="dist\15.bundle.js" />
-    <Content Include="dist\16.bundle.js" />
-    <Content Include="dist\17.bundle.js" />
-    <Content Include="dist\18.bundle.js" />
-    <Content Include="dist\19.bundle.js" />
-    <Content Include="dist\2.bundle.js" />
-    <Content Include="dist\20.bundle.js" />
-    <Content Include="dist\21.bundle.js" />
-    <Content Include="dist\22.bundle.js" />
-    <Content Include="dist\23.bundle.js" />
-    <Content Include="dist\24.bundle.js" />
-    <Content Include="dist\25.bundle.js" />
-    <Content Include="dist\26.bundle.js" />
-    <Content Include="dist\27.bundle.js" />
-    <Content Include="dist\28.bundle.js" />
-    <Content Include="dist\29.bundle.js" />
-    <Content Include="dist\3.bundle.js" />
-    <Content Include="dist\30.bundle.js" />
-    <Content Include="dist\31.bundle.js" />
-    <Content Include="dist\32.bundle.js" />
-    <Content Include="dist\33.bundle.js" />
-    <Content Include="dist\34.bundle.js" />
-    <Content Include="dist\35.bundle.js" />
-    <Content Include="dist\4.bundle.js" />
-    <Content Include="dist\5.bundle.js" />
-    <Content Include="dist\6.bundle.js" />
-    <Content Include="dist\7.bundle.js" />
-    <Content Include="dist\8.bundle.js" />
-    <Content Include="dist\9.bundle.js" />
-    <Content Include="dist\bundle.js" />
     <Content Include="index.html" />
+    <Content Include="ng-starter.csproj" />
+    <Content Include="ng-starter.sln" />
     <Content Include="packages.config" />
-    <Content Include="src\app\app.component.css">
-      <DependentUpon>app.component.html</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\favourite-uncle-page.component.css">
-      <DependentUpon>favourite-uncle-page.component.html</DependentUpon>
-    </Content>
-    <Content Include="src\app\pages\home-page.component.css">
-      <DependentUpon>home-page.component.html</DependentUpon>
-    </Content>
-    <Content Include="webpack.config.js" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\pages\home-page.component.html" />
-    <Content Include="src\app\pages\favourite-uncle-page.component.html" />
+    <Content Include="src\app\pages\landing-page.component.css" />
+    <Content Include="src\app\pages\landing-page.component.html" />
+    <Content Include="src\app\shared\components\hamburger-button.component.css" />
+    <Content Include="src\app\shared\components\hamburger-button.component.html" />
+    <Content Include="src\app\shared\components\header.component.css" />
+    <Content Include="src\app\shared\components\header.component.html" />
+    <Content Include="src\app\shared\services\storage.service.js" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\landing.po.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\environment.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\pages.module.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\hamburger-button.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\components\header.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\constants.ts" />
+    <TypeScriptCompile Include="src\app\shared\services\storage.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="package.json" />
-    <Content Include="tsconfig.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="src\app\app.component.ts">
-      <DependentUpon>app.component.html</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\pages\favourite-uncle-page.component.ts">
-      <DependentUpon>favourite-uncle-page.component.html</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\container.ts" />
-    <TypeScriptCompile Include="src\create-container.ts" />
-    <TypeScriptCompile Include="src\app\pages\home-page.component.ts">
-      <DependentUpon>home-page.component.html</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\shared\api.service.ts" />
-    <TypeScriptCompile Include="src\app\shared\index.ts" />
-    <TypeScriptCompile Include="src\app\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\index.ts" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="e2e\tsconfig.e2e.json" />
     <None Include="Properties\PublishProfiles\oliviamitchellbrown - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\oliviamitchellbrown - Web Deploy.pubxml" />
+    <Content Include="Web.config" />
+    <Content Include="src\app\shared\services\storage.service.js.map" />
+    <Content Include="tsconfig.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -171,7 +145,8 @@
           <IISUrl>http://localhost:61547/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
