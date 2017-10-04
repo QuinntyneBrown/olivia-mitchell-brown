@@ -35,8 +35,9 @@ export class CarouselComponent extends HTMLElement {
 
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(document.importNode(template.content, true));          
-        this.insertBefore(style, this.childNodes[0]);        
+        this.shadowRoot.appendChild(document.importNode(template.content, true)); 
+        console.log(style);
+        this.shadowRoot.insertBefore(style, this.shadowRoot.childNodes[0]);        
         this.bind();                
     }
 
