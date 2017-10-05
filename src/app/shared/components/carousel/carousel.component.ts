@@ -46,7 +46,8 @@ export class CarouselComponent extends HTMLElement {
 
         this.carouselWidth$.subscribe(x => this.style.setProperty("--viewport-width", `${x}`));
 
-        setInterval(() => this._renderNext(), 3000);
+        if(this._interval$.value)
+            setInterval(() => this._renderNext(), 3000);
     }
 
     public currentIndex: number = 0;
@@ -121,6 +122,8 @@ export class CarouselComponent extends HTMLElement {
     public inTransition: boolean = false;
 
     public get containerHTMLElement(): CarouselContainerComponent { return this.querySelector("ce-carousel-container") as CarouselContainerComponent; };    
+
+    private _interval$: BehaviorSubject<number> = new BehaviorSubject(null);
 
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {

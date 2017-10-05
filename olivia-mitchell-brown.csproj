@@ -80,7 +80,9 @@
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="protractor.conf.js" />
-    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.css">
+      <DependentUpon>app.component.html</DependentUpon>
+    </Content>
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\pages\landing-page.component.css">
       <DependentUpon>landing-page.component.html</DependentUpon>
@@ -117,13 +119,16 @@
       <DependentUpon>header.component.html</DependentUpon>
     </Content>
     <Content Include="src\app\shared\components\header.component.html" />
+    <Content Include="src\assets\Olivia_Sept_1.png" />
     <Content Include="webpack.config.js" />
     <Content Include="src\app\shared\components\carousel-item-content.component.html" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="e2e\landing.po.ts" />
-    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts">
+      <DependentUpon>app.component.html</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.routing.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />

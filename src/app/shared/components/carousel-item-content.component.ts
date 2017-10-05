@@ -31,6 +31,7 @@ export class CarouselItemContentComponent extends HTMLElement {
 
     private async _bind() {
         this.title$.subscribe(x => this.titleElement.innerText = x);
+        this.imageElement.src = 'src/assets/Olivia_Sept_1.png';
     }
 
     private _setEventListeners() {
@@ -50,6 +51,8 @@ export class CarouselItemContentComponent extends HTMLElement {
     }
 
     public get titleElement(): HTMLElement { return this.shadowRoot.querySelector("h1"); }
+
+    public get imageElement(): HTMLImageElement { return this.shadowRoot.querySelector("img"); }
 
     public title$: BehaviorSubject<string> = new BehaviorSubject("");
 }
