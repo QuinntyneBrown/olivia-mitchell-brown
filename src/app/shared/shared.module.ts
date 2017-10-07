@@ -9,9 +9,11 @@ import "./components/carousel";
 import "./components/carousel-item-content.component";
 
 import { Storage } from "./services/storage.service";
+import { LoggingService } from "./services/logging.service";
 
 const providers = [
-    Storage
+    Storage,
+    LoggingService
 ];
 
 const declarations = [
